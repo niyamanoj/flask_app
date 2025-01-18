@@ -58,6 +58,9 @@ def predict():
         })
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+@app.route('/test', methods=['POST'])
+def test():
+    return jsonify({"message": "POST request received!"})
 
 if __name__ == '__main__':
      app.run()
