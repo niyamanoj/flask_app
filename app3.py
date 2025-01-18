@@ -8,7 +8,7 @@ svm_model_dia = joblib.load('dia_model.pkl')   # Diabetes model
 svm_model_asthma = joblib.load('asthma_model.pkl')  # Asthma model
 
 scaler_card = joblib.load('scaler1.pkl')       # Cardiovascular scaler
-scaler_dia = joblib.load('scaler.pkl')         # Diabetes scaler
+scaler_dia = joblib.load('scaler.pkl')        # Diabetes scaler
 scaler_asthma = joblib.load('scaler2.pkl')     # Asthma scaler
 
 predictions_mapping = {
