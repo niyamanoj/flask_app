@@ -23,7 +23,7 @@ app = Flask(__name__)
 def home():
     return "Welcome to the Chronic Disease Prediction API!"
 
-@app.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['GET','POST'])
 def predict():
     try:
         # Parse the input JSON
@@ -58,8 +58,6 @@ def predict():
         })
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-@app.route('/test', methods=['GET', 'POST'])
-def test():
-    return jsonify({"message": "Request received!"})
+
 if __name__ == '__main__':
      app.run()
