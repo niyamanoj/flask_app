@@ -23,7 +23,7 @@ app = Flask(__name__)
 def home():
     return "Welcome to the Chronic Disease Prediction API!"
 
-@app.route('/predict', methods=['GET','POST'])
+@app.route('/predict', methods=['POST'])
 def predict():
     try:
         # Parse the input JSON
