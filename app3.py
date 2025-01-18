@@ -19,11 +19,8 @@ predictions_mapping = {
 # Initialize Flask app
 app = Flask(__name__)
 
-@app.route('/')
-def home():
-    return "Welcome to the Chronic Disease Prediction API!"
 
-@app.route('/predict', methods=['POST'])
+@app.route('/', methods=['POST'])
 def predict():
     try:
         # Parse the input JSON
@@ -60,6 +57,4 @@ def predict():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=False)
-
-
+     app.run()
